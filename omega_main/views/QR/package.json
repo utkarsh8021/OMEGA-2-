@@ -1,0 +1,21 @@
+{
+  "name": "qr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "QR.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "utkarsh",
+  "license": "ISC",
+  "dependencies": {
+    "export": "^0.1.337",
+    "express": "^4.17.1",
+    "import": "0.0.6",
+    "qr-image": "^3.2.0",
+    "qrcode": "^1.4.4",
+    "qrcode-generator": "^1.4.4",
+    "randomstring": "^1.1.5",
+    "request": "^2.88.2"
+  }
+}

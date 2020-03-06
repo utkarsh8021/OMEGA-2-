@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>FEDTech 2020</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- stylesheets css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+
+  <link rel="stylesheet" href="css/et-line-font.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+  	<link rel="stylesheet" href="css/vegas.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <style>
+.logo{
+  display: block;
+  height:200px;
+  width:200px;
+  margin:auto;
+}
+
+.logo-div{
+  height:auto;
+  width:auto;
+}
+
+.logo:hover{
+     transform: scale(1.5);
+}
+    .border-left{
+      background-image: linear-gradient( #dad5d5 33%, rgba(255, 255, 255, 0) 20%);
+background-position: left;
+background-size: 2px 20px;
+background-repeat: repeat-y;
+    }
+    .border-right{
+      background-image: linear-gradient( #dad5d5 33%, rgba(255, 255, 255, 0) 20%);
+      background-position: right;
+      background-size: 2px 20px;
+      background-repeat: repeat-y ;
+    }    
+    .border-top{
+      background-image: linear-gradient(to right, #dad5d5 33%, rgba(255, 255, 255, 0) 20%);
+background-position: top;
+background-size: 20px 2px;
+background-repeat: repeat-x;
+    }
+    .border-bottom{
+      background-image: linear-gradient(to right,  #dad5d5 33%, rgba(255, 255, 255, 0) 20%);
+      background-position: bottom;
+      background-size: 20px 2px;
+      background-repeat: repeat-x ;
+    }
+    .border-left-top{
+            background-image: linear-gradient(to right, #dad5d5 33%, rgba(255, 255, 255, 0) 20%),linear-gradient(  #dad5d5 33%, rgba(255, 255, 255, 0) 20%);
+      background-position: top, left;
+      background-size: 20px 2px, 2px 20px;
+      background-repeat: repeat-x, repeat-y;
+
+    }
+
+.event:link{
+  color:black;
+  background-color: transparent;
+  text-decoration: none;
+}
+.event:hover{
+  color:black;
+  background-color: transparent;
+  text-decoration: none;
+}
+.event:active{
+  color:black;
+  background-color: transparent;
+  text-decoration: none;
+}
+.event:visited{
+  color:black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+/* =================side slide out panel================== */
+.sidepanel {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden;
+  padding-top: 60px; 
+  transition: 0.5s;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1c11a;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255, 0.0);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  outline-style: none;
+}
+@media (min-width: 660px) {
+.openbtn {
+display: none;
+}
+.sidepanel{
+  display:none;
+}
+}
+/* ================ The Timeline ================ */
+
+.timeline {
+  position: relative;
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: ' ';
+  display: block;
+  width: 6px;
+  height: 100%;
+  margin-left: -3px;
+  background: rgb(80,80,80);
+  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  
+  z-index: 5;
+}
+
+.timeline li {
+  padding: 1em 0;
+}
+
+.timeline li:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.direction-l {
+  position: relative;
+  width: 300px;
+  float: left;
+  text-align: right;
+}
+
+.direction-r {
+  position: relative;
+  width: 300px;
+  float: right;
+}
+
+.flag-wrapper {
+  position: relative;
+  display: inline-block;
+  
+  text-align: center;
+}
+
+.flag {
+  position: relative;
+  display: inline;
+  background: rgb(248,248,248);
+  padding: 6px 10px;
+  border-radius: 5px;
+  
+  font-weight: 600;
+  text-align: left;
+}
+
+.direction-l .flag {
+  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-r .flag {
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  content: ' ';
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background: #fff;
+  border-radius: 10px;
+  border: 4px solid rgb(255,80,80);
+  z-index: 10;
+}
+
+.direction-r .flag:before {
+  left: -40px;
+}
+
+.direction-l .flag:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-left-color: rgb(248,248,248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.direction-r .flag:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-right-color: rgb(248,248,248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.time-wrapper {
+  display: inline;
+  
+  line-height: 1em;
+  font-size: 0.66666em;
+  color: rgb(250,80,80);
+  vertical-align: middle;
+}
+
+.direction-l .time-wrapper {
+  float: left;
+}
+
+.direction-r .time-wrapper {
+  float: right;
+}
+
+.time {
+  display: inline-block;
+  padding: 4px 6px;
+  background: rgb(248,248,248);
+}
+
+.desc {
+  margin: 1em 0.75em 0 0;
+  
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+.direction-r .desc {
+  margin: 1em 0 0 0.75em;
+}
+
+/* ================ Timeline Media Queries ================ */
+
+@media screen and (max-width: 660px) {
+
+.timeline {
+ 	width: 100%;
+	padding: 4em 0 1em 0;
+}
+
+.timeline li {
+	padding: 2em 0;
+}
+
+.direction-l,
+.direction-r {
+	float: none;
+	width: 100%;
+
+	text-align: center;
+}
+
+.flag-wrapper {
+	text-align: center;
+}
+
+.flag {
+	background: rgb(255,255,255);
+	z-index: 15;
+}
+
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: -30px;
+	left: 50%;
+	content: ' ';
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;
+	background: #fff;
+	border-radius: 10px;
+	border: 4px solid rgb(255,80,80);
+	z-index: 10;
+}
+
+.direction-l .flag:after,
+.direction-r .flag:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: -8px;
+	height: 0;
+	width: 0;
+	margin-left: -8px;
+	border: solid transparent;
+	border-bottom-color: rgb(255,255,255);
+	border-width: 8px;
+	pointer-events: none;
+}
+
+.time-wrapper {
+	display: block;
+	position: relative;
+	margin: 4px 0 0 0;
+	z-index: 14;
+}
+
+.direction-l .time-wrapper {
+	float: none;
+}
+
+.direction-r .time-wrapper {
+	float: none;
+}
+
+.desc {
+	position: relative;
+	margin: 1em 0 0 0;
+	padding: 1em;
+	background: rgb(245,245,245);
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	
+  z-index: 15;
+}
+
+.direction-l .desc,
+.direction-r .desc {
+	position: relative;
+	margin: 1em 1em 0 1em;
+	padding: 1em;
+	
+  z-index: 15;
+}
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 660px) {
+
+.direction-l .desc,
+.direction-r .desc {
+	margin: 1em 4em 0 4em;
+}
+}
+
+
+/*Scroll Bar*/
+#dot-nav{    
+	right: 10px;
+	top: 50%;
+	margin-top: -50px;
+	height: 100px;
+	z-index: 999;
+}
+
+#dot-nav ul {
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+#dot-nav li {
+	position: relative;
+
+	cursor: pointer;
+	padding: 5px;
+
+	vertical-align:bottom;
+}
+
+#dot-nav a {
+	outline: 0;
+	vertical-align:top;
+	margin: 0px 0px 0px 25px;
+	position: relative;
+    top:-5px;
+    width: 10%;
+    
+}
+
+.log{
+    height: 20px;
+    transition: transform .2s;
+}
+
+.log:hover{
+    transform: scale(3);
+}
+
+
+  </style>
+</head>
+<body>
+<!-- preloader section -->
+<section class="preloader">
+	<div class="sk-circle">
+       <div class="sk-circle1 sk-child"></div>
+       <div class="sk-circle2 sk-child"></div>
+       <div class="sk-circle3 sk-child"></div>
+       <div class="sk-circle4 sk-child"></div>
+       <div class="sk-circle5 sk-child"></div>
+       <div class="sk-circle6 sk-child"></div>
+       <div class="sk-circle7 sk-child"></div>
+       <div class="sk-circle8 sk-child"></div>
+       <div class="sk-circle9 sk-child"></div>
+       <div class="sk-circle10 sk-child"></div>
+       <div class="sk-circle11 sk-child"></div>
+       <div class="sk-circle12 sk-child"></div>
+     </div>
+</section>
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color:#f1c11a">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">&#9776;</button>
+
+<div data-spy="affix" id="dot-nav">
+  <ul>
+    <li class="awesome-tooltip active" title="Home"><a href="#home"></a><img class="log"
+        src="https://img.icons8.com/bubbles/50/000000/music.png"></a></li>
+    <li class="awesome-tooltip" title="About"><a href="#about"><img class="log"
+          src="https://img.icons8.com/bubbles/50/000000/camera.png"></a></li>
+    <li class="awesome-tooltip" title="Projects"><a href="#feature"><img class="log"
+          src="https://img.icons8.com/bubbles/50/000000/girl-with-glasses-shopping-cart.png"></a></li>
+    <li class="awesome-tooltip" title="Contact"><a href="#contact"><img class="log"
+          src="https://img.icons8.com/bubbles/50/000000/share.png"></a></li>
+  </ul>
+</div>
+
+<!-- home section -->
+<section id="home">
+  <div class="container">
+    <div class="layer">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-sm-12">
+          <div class="home-thumb">
+            <h1 class="wow fadeInUp" data-wow-delay="0.4s">FEDTech 2020<br>00:00:00</h1>
+            <h3 class="wow fadeInUp" data-toggle="modal" data-target="#modal1" class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s">We are almost <strong>ready to launch</strong> our <strong>new
+                creative</strong> website!</h3>
+            <a href="#"  class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s" style="margin-top:20px;">Register Now!</a>
+            <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-lg  smoothScroll wow fadeInUp" data-wow-delay="1.0s" style="margin-top:20px;">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+			
+</section>
+
+
+<!-- about section -->
+<section id="about">
+	<div class="container">
+		<div class="row">
+
+      <div class="col-md-6 col-sm-12">
+        <img src="images/about-img.png" class="img-responsive wow fadeInUp" alt="About">
+      </div>
+
+			<div class="col-md-6 col-sm-12">
+				<div class="about-thumb">
+					<div class="section-title">
+						<h1 class="wow fadeIn" data-wow-delay="0.2s">FEDTech</h1>
+						<h3 class="wow fadeInUp" data-wow-delay="0.4s">We are Coming</h3>
+					</div>
+					<div class="wow fadeInUp" data-wow-delay="0.6s">
+						<p>Vivamus elit risus, porttitor id placerat ut, aliquet non quam. Pellentesque nulla metus, ornare et porttitor vel, consectetur vitae erat. Vestibulum tristique semper tellus vitae condimentum. Duis sed eros eget diam dictum posuere.</p>
+						<p>Aliquam vel gravida ligula. Phasellus ut purus ac libero ultrices commodo commodo at quam. In vestibulum purus sit amet tempus euismod. Donec sed congue nisl.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+  </div>
+      <div class="col-md-6 col-sm-12">
+      </div>
+    <div class="col-md-6 col-sm-12">
+      <img src="images/ady.svg" class="img-responsive wow fadeInUp" alt="About" style="height: 100vh; position: absolute;">
+    </div>
+</section>
+
+
+<!-- speaker section -->
+<section id="feature">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-6 col-sm-12" style="color: white;">
+        <div class="about-thumb">
+          <div class="section-title">
+            <h1 class="wow fadeIn" data-wow-delay="0.2s">our company</h1>
+            <h3 class="wow fadeInUp" data-wow-delay="0.4s">Comila Studio is based in Hong Kong</h3>
+          </div>
+          <div class="wow fadeInUp" data-wow-delay="0.6s">
+            <p style="color: white;">Vivamus elit risus, porttitor id placerat ut, aliquet non quam. Pellentesque nulla
+              metus, ornare et porttitor vel, consectetur vitae erat. Vestibulum tristique semper tellus vitae
+              condimentum. Duis sed eros eget diam dictum posuere.</p>
+            <p style="color: white;">Aliquam vel gravida ligula. Phasellus ut purus ac libero ultrices commodo commodo
+              at quam. In vestibulum purus sit amet tempus euismod. Donec sed congue nisl.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- alexa section -->
+<section id="about" style="background-color: black;">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-6 col-sm-12">
+        <img src="images/gif.gif" class="img-responsive wow fadeInUp" alt="About">
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="about-thumb">
+          <div class="section-title">
+            <h1 class="wow fadeIn" data-wow-delay="0.2s">our company</h1>
+            <h3 class="wow fadeInUp" data-wow-delay="0.4s">Comila Studio is based in Hong Kong</h3>
+          </div>
+          <div class="wow fadeInUp" data-wow-delay="0.6s">
+            <p>Vivamus elit risus, porttitor id placerat ut, aliquet non quam. Pellentesque nulla metus, ornare et
+              porttitor vel, consectetur vitae erat. Vestibulum tristique semper tellus vitae condimentum. Duis sed eros
+              eget diam dictum posuere.</p>
+            <p>Aliquam vel gravida ligula. Phasellus ut purus ac libero ultrices commodo commodo at quam. In vestibulum
+              purus sit amet tempus euismod. Donec sed congue nisl.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- itinerary -->
+<section id="contact">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-2 col-md-8 col-sm-12">
+				<div class="section-title" style="padding-bottom:0;">
+					<h1 class="wow fadeInUp" data-wow-delay="0.3s">Itinerary</h1>
+				</div>
+				<div class="contact-form wow fadeInUp" data-wow-delay="1.0s" style="margin: 0;padding: 0;color: rgb(50,50,50);font-family: 'Open Sans', sans-serif;font-size: 112.5%;line-height: 1.6em;">
+          <!-- The Timeline -->
+          <ul class="timeline">
+          
+            <!-- Item 1 -->
+            <li>
+              <a href="#" class="event">
+                <div class="direction-r">
+                  <div class="flag-wrapper">
+                    <span class="flag">Inaugral</span>
+                    <span class="time-wrapper"><span class="time">10:00 - 12:00</span></span>
+                  </div>
+                  <div class="desc">My current employment. Way better than the position before!</div>
+                </div>
+              </a>
+            </li>
+          
+            <!-- Item 2 -->
+            <li>
+              <a href="#" class="event">
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="flag">Crypto</span>
+                  <span class="time-wrapper"><span class="time">12:00 - 14:00</span></span>
+                </div>
+                <div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
+              </div>
+            </a>
+            </li>
+          
+            <!-- Item 3 -->
+            <li>
+              <a href="#" class="event">
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="flag">Lunch</span>
+                  <span class="time-wrapper"><span class="time">14:00 - 15:00</span></span>
+                </div>
+                <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
+              </div>
+              </a>
+            </li>
+
+            <!-- Item 4 -->
+            <li>
+              <a href="#" class="event">
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="flag">Crypto</span>
+                  <span class="time-wrapper"><span class="time">15:00 - 17:00</span></span>
+                </div>
+                <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
+              </div>
+              </a>
+            </li>
+
+            <!-- Item 5 -->
+            <li>
+              <a href="#" class="event">
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="flag">ML Debate</span>
+                  <span class="time-wrapper"><span class="time">17:00 - 19:00</span></span>
+                </div>
+                <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
+              </div>
+            </a>
+            </li>
+          
+          </ul>
+
+        </div>
+            <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="padding-top:20px;">
+              <a href="events.html"><input name="submit" type="submit" class="form-control submit" id="submit"
+                  value="SEE ALL EVENTS"></a>
+            </div>
+			</div>
+	
+		</div>
+	</div>
+</section>
+
+
+<!-- feature section -->
+<section id="feature">
+  <div class="container" style="padding-left:210px; padding-right:210px;">
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 logo-div border-bottom"><img class="logo" src="images/download.png" alt="" ></div>
+      <div class="col-lg-4 col-sm-6 logo-div border-left"><img class="logo" src="images/download.png" alt="" ></div>
+      <div class="col-lg-4 col-sm-6 logo-div border-left"><img class="logo" src="images/download.png" alt="" ></div>
+      <div class="col-lg-4 col-sm-6 logo-div border-right"><img class="logo" src="images/download.png" alt="" ></div>
+      <div class="col-lg-4 col-sm-6 logo-div border-top"><img class="logo" src="images/download.png" alt="" ></div>
+      <div class="col-lg-4 col-sm-6 logo-div border-left-top"><img class="logo" src="images/download.png" alt="" ></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Registration section -->
+<section id="contact">
+  <div id="register">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-sm-12">
+          <div class="section-title" style="padding-bottom: 20px;">
+            <h1 class="wow fadeInUp" data-wow-delay="0.3s">Register Now</h1>
+          </div>
+          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+            <form id="myForm" method="post" action='/'>
+              <div class="col-md-4 col-sm-12">
+                <input id="item" name="item" type="text" class="form-control" placeholder="First Name" required>
+              </div>
+              <!-- <div class="col-md-4 col-sm-12">
+                <input name="name" type="text" class="form-control" placeholder="Middle Name (optional)" required>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <input name="name" type="text" class="form-control" placeholder="Last Name" required>
+              </div> -->
+              <div class="col-md-6 col-sm-6">
+                <input id="item1" name="item1" type="email" class="form-control" placeholder="Email-ID" required>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <input id="item2" name="item2" type="text" class="form-control" placeholder="Contact No." required>
+              </div>
+              <!-- <div class="col-md-12 col-sm-12">
+                <textarea name="message" class="form-control" placeholder="Message" rows="6" required></textarea>
+              </div> -->
+              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+                <button id="submit" type="submit" class="form-control submit" id="submit" value="Register">Register</button>
+              </div>
+            
+            </form>
+            <h3>Invalid Phone</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer section -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+      <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0 L50 100 L100 0 Z"></path>
+      </svg>
+
+      <div class="col-md-4 col-sm-6">
+        <h2>The <br><strong>F</strong>ederation of <strong>E</strong>ntrepreneurship <strong>D</strong>evelopment</h2>
+          <div class="wow fadeInUp" data-wow-delay="0.3s">
+             <p>The Federation of Entrepreneurship Development is the student body of KIIT TBI which aims to bring all ideas, potential startups under one umbrella.</p>
+             <p class="copyright-text">Copyright &copy; 2020 The Federation of Entrepreneurship Development</p>
+          </div>
+      </div>
+
+      <div class="col-md-1 col-sm-1"></div>
+
+      <div class="col-md-4 col-sm-5" style="float:right;">
+        <h2>Our Office</h2>
+        <p class="wow fadeInUp" data-wow-delay="0.6s">
+          120-240 aliquam augue libero,<br>
+          Convallis in vulputate 10220 <br>
+          San Francisco, CA, USA
+        </p>
+        <ul class="social-icon">
+          <li><a href="#" class="fa fa-facebook wow bounceIn" data-wow-delay="0.9s"></a></li>
+          <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="1.2s"></a></li>
+          <li><a href="#" class="fa fa-behance wow bounceIn" data-wow-delay="1.4s"></a></li>
+          <li><a href="#" class="fa fa-dribbble wow bounceIn" data-wow-delay="1.6s"></a></li>
+        </ul>
+      </div>
+
+		</div>
+	</div>
+</footer>
+
+<!-- modal -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content modal-popup">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h2 class="modal-title">Login</h2>
+        </div>
+        <form action="#" method="post">
+          <input name"emailid" type="text" class="form-control" id="email"" placeholder="Email-ID">
+          <input name="Password" type="text" class="form-control" id="password" placeholder="Password">
+          <input name="submit" type="submit" class="form-control" id="submit" value="Login">
+        </form>
+      </div>
+  </div>
+</div>
+
+<!-- Back top -->
+<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- javscript js -->
+<script>function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+
+  /* Set the width of the sidebar to 0 (hide it) */
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+  
+
+//   $(document).ready(function() {
+ 
+//  $('#myForm').submit(function() {
+//  $("#con").empty().text("File is uploading...");
+//  $(this).ajaxSubmit({
+//  error: function(xhr) {
+//  status('Error: ' + xhr.con);
+//  },
+ 
+  
+//  success: function(response) {
+//  $("#con").empty().text(response);
+//  console.log(response);
+//  }
+//  });
+
+//  //Code to disable the page refresh.
+//  return false;
+//  });
+//  });
+
+  
+
+
+  // document.getElementById("myForm").onsubmit = (e) => {
+  //   e.preventDefault();
+  //           const url = "http://localhost:5000/sent";
+  //           var data = new URLSearchParams();
+
+            // console.log(e.target)
+    //         for(const pair of new FormData(e.target)){
+    //             // data.append(pair[0],pair[1])
+    //             data.append(pair[0], pair[1]);
+                
+    //         }
+        
+    //     fetch(url,{
+    //         method:"post",
+    //         body:data,
+    //     }).then(res=>res.json())
+    //     .then(res2 => {
+
+    //     console.log(res2)
+    //     location.reload()
+    // });
+    // document.getElementById("con").innerHTML="res"
+  // }
+
+  $(function(){				
+                $('#submit').click(function(e){
+                    e.preventDefault();
+                    console.log('select_link clicked');
+
+          var data = {};
+					
+					
+					$.ajax({
+						type: 'POST',
+						data: JSON.stringify(data),
+				        contentType: 'application/json',
+                        url: 'http://localhost:2000/',						
+                        success: function(data) {
+                            console.log('success');
+                            console.log(JSON.stringify(data));
+                          
+                        }
+                    });
+                  });				
+            });
+
+    // $(document).ready(function() {
+    //   $("form").submit(function(event) {
+    //     event.preventDefault();
+    //     var name = $("#item").val();
+    //     var email = $("#item1").val();
+    //     var contactnumber = $("#item2").val();
+    //     var submit = $("#submit").val();
+    //     $(".form-message").load('/sent',{
+    //       name: name,
+    //       email: email,
+    //       contactnumber: contactnumber,
+    //       submit: submit
+    //     });
+    //   });
+    // });
+  
+  </script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/vegas.min.js"></script>
+
+<script src="js/wow.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
